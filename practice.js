@@ -241,7 +241,15 @@ longer = (arr1, arr2) => arr1 > arr2 ? arr1 : arr2
 */
 
 //Code Here
-
+both = (arr1, arr2) => { 
+  var longer = longer(arr1,arr2)
+  var newArr = []
+  for(let i = 0; i < arr1.length; i++){
+    for(let i = 0; i < arr2.length; i++){
+      
+    }
+  }
+}
 
 
 ////////// PROBLEM 12 //////////
