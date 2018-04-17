@@ -18,7 +18,7 @@ var arr = [10,20,30];
 */
 
 //Code Here
-
+first = arr => arr[0]; 
 
 
 ////////// PROBLEM 2 //////////
@@ -33,7 +33,7 @@ var arr = [40,50,60];
 */
 
 //Code Here
-
+last = arr => arr[arr.length - 1]
 
 
 ////////// PROBLEM 3 //////////
@@ -48,7 +48,11 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 */
 
 //Code Here
-
+looper = family => {
+  for(i=0; i<family.length; i++){
+    alert(family[i])
+  }
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -63,7 +67,11 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
-
+reversedLooper = letters => {
+  for(i = letters.length -1; i >= 0; i--){
+    alert(letters[i])
+  }
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -78,7 +86,7 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 */
 
 //Code Here
-
+evenFinder = nums => nums.filter(e => e % 2 === 0)
 
 
 ////////// EXTRA PRACTICE PROBLEMS BELOW //////////
@@ -95,7 +103,17 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
-
+divider = numbersArray => {
+  var odds = []
+  var evens = []
+  var results = []
+  for(var i = 0; i < numbersArray.length; i++){
+    if(numbersArray[i] % 2 === 0) evens.push(numbersArray[i])
+    if(numbersArray[i] % 2 !== 0) odds.push(numbersArray[i])
+  }
+  results.push(evens, odds)
+  return results
+}
 
 
 ////////// PROBLEM 7 //////////
@@ -116,7 +134,10 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
-
+finder = arr => {
+  var num = getRandomArbitrary()
+  return arr.includes(num)
+}
 
 
 ////////// PROBLEM 8 //////////
@@ -129,7 +150,8 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   Here we're going to write a function that mimics going shopping and checking things off of our grocery list and adding new items to our list.
 
   Write a function called removeItem that is given two arguments, the first is myGroceryList, and the second is an item to remove from myGroceryList. 
-  If the second argument (or the item to add or remove) matches an item in myGroceryList, remove that item from the your grocery list and return the new, updated grocery list.
+  If the second argument (or the item to add or remove) matches an item in myGroceryList, remove that item from the your grocery list and return the new, 
+  updated grocery list.
 
   Once you do that, write another function called addItem that is given two arguments, the first is myGroceryList and the second is an item to add to your grocery list. 
   In addItem add the item you passed in to myGroceryList then return the new, updated grocery list.
@@ -145,7 +167,12 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
-
+removeItem = (myGroceryList, item) => {
+  return myGroceryList && item ? myGroceryList.filter(e => e !== item) : []
+}
+addItem = (myGroceryList, item) => {
+  return myGroceryList && item ? myGroceryList.concat(item) : []
+}
 
 
 ////////// PROBLEM 9 //////////
@@ -155,6 +182,12 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+maker = () => {
+  var arr = []
+  for(var i = 1; i < 216; i++){
+    arr.push(i)
+  }
+} 
 
 
 
@@ -196,7 +229,7 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
-
+longer = (arr1, arr2) => arr1 > arr2 ? arr1 : arr2
 
 
 /*
